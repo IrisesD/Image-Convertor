@@ -85,8 +85,8 @@ def trans(input_path,output_path,Q = 1, k1 = 0.1):
     floyd_steinberg_dither('f1.jpg',output_path)
     print("The second dithering finished.")
     print("OK.")
-Q = float(sys.argv[1])
-k1 = float(sys.argv[2])
-input_path = sys.argv[3]
-output_path = sys.argv[4]
+Q = float(sys.argv[3])
+k1 = float(sys.argv[4])
+input_path = sys.argv[1]
+output_path = sys.argv[2]
 trans(Q,k1,input_path,output_path)
