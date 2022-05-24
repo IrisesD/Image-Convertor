@@ -16,12 +16,10 @@ def trans(input_path,output_path,Q = 1, k1 = 0.1):
     imgf_arr = np.array(imgf)
     print(imgf_arr)
     imgb = Image.open('f0.jpg')
-    imgft = np.array(imgf)
-    #gaussian_filter(imgf)
+    imgft = gaussian_filter(imgf)
     #print(imgft)
     print("Initial image filtering finished.")
-    imgbt = np.array(imgb)
-    #gaussian_filter(imgb)
+    imgbt = gaussian_filter(imgb)
     print("Dithered image filtering finished.")
     imge = [[[0,0,0]for i in range(len(imgf_arr[0]))]for j in range(len(imgf_arr))]
     La = [[[0,0,0]for i in range(len(imgf_arr[0]))]for j in range(len(imgf_arr))]
@@ -89,4 +87,4 @@ Q = float(sys.argv[3])
 k1 = float(sys.argv[4])
 input_path = sys.argv[1]
 output_path = sys.argv[2]
-trans(Q,k1,input_path,output_path)
+trans(input_path,output_path,Q,k1)
